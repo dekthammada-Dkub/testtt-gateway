@@ -1,0 +1,29 @@
+{
+  "name": "vc-gateway",
+  "version": "1.0.0",
+  "description": "Minecraft Voice Chat WebSocket Gateway with WebRTC Signaling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:init": "node -e \"require('./src/database').initialize().then(() => { console.log('DB ready'); process.exit(0); })\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.3",
+    "rate-limiter-flexible": "^5.0.3",
+    "uuid": "^11.1.1",
+    "winston": "^3.15.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
